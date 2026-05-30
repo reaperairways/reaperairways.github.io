@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reaper Airways</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Background */
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.85)
+    ),
+    url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05');
+    background-size:cover;
+    background-position:center;
+    z-index:-2;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at top,
+    rgba(180,0,0,.2),
+    transparent 60%);
+    z-index:-1;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:28px 8%;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.logo img{
+    height:55px;
+}
+
+.logo-text{
+    font-size:1.3rem;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    opacity:.8;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    opacity:1;
+}
+
+.join-btn{
+    background:white;
+    color:black;
+    border:none;
+    padding:12px 24px;
+    border-radius:999px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.join-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* Hero Content */
+
+.hero-content{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.content{
+    max-width:950px;
+}
+
+.badge{
+    display:inline-block;
+    padding:10px 18px;
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(10px);
+    border-radius:999px;
+    margin-bottom:25px;
+    color:#ddd;
+}
+
+h1{
+    font-size:clamp(3rem,8vw,7rem);
+    line-height:1;
+    margin-bottom:25px;
+    font-weight:800;
+}
+
+.gradient{
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #d1d1d1,
+        #9f9f9f
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.description{
+    max-width:700px;
+    margin:auto;
+    color:#cfcfcf;
+    line-height:1.7;
+    font-size:1.1rem;
+}
+
+.buttons{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.primary{
+    background:white;
+    color:black;
+    padding:16px 30px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.secondary{
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(10px);
+    color:white;
+    text-decoration:none;
+    padding:16px 30px;
+    border-radius:999px;
+}
+
+/* Stats */
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    padding:50px;
+    flex-wrap:wrap;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h2{
+    font-size:2rem;
+}
+
+.stat p{
+    color:#aaa;
+    margin-top:5px;
+}
+
+@media(max-width:900px){
+
+.nav-links{
+    display:none;
+}
+
+.stats{
+    gap:30px;
+}
+
+h1{
+    font-size:3.5rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<nav>
+
+<div class="logo">
+    <img src="https://i.ibb.co/xKh60tXp/image-26.png" alt="Reaper Airways">
+    <div class="logo-text">REAPER AIRWAYS</div>
+</div>
+
+<div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Fleet</a>
+    <a href="#">Flights</a>
+    <a href="#">Careers</a>
+    <a href="#">Loyalty</a>
+</div>
+
+<button class="join-btn">
+    Join Airline
+</button>
+
+</nav>
+
+<div class="hero-content">
+
+<div class="content">
+
+<div class="badge">
+    Premium RoAviation Experience
+</div>
+
+<h1>
+Fly Beyond<br>
+<span class="gradient">The Ordinary</span>
+</h1>
+
+<p class="description">
+Reaper Airways delivers a premium RoAviation experience through
+professional crews, realistic flight operations, luxury cabins,
+and unforgettable journeys across the Roblox skies.
+</p>
+
+<div class="buttons">
+    <a href="#" class="primary">Book Flight</a>
+    <a href="#" class="secondary">Explore Fleet</a>
+</div>
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+    <h2>777</h2>
+    <p>AeroTech Flagship</p>
+</div>
+
+<div class="stat">
+    <h2>24/7</h2>
+    <p>Operations</p>
+</div>
+
+<div class="stat">
+    <h2>4</h2>
+    <p>Loyalty Tiers</p>
+</div>
+
+<div class="stat">
+    <h2>∞</h2>
+    <p>Possibilities</p>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
